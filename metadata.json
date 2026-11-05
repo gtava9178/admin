@@ -1,0 +1,8 @@
+{
+  "name": "بحرك - Bahrak",
+  "description": "منصة عربية عصرية لمشاركة الفيديوهات القصيرة بتصميم مستوحى من أمواج البحر وتفاعل كامل مع البث والتعليقات والرسائل الخاصة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

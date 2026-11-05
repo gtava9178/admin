@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --deep: #04202b;
+  --tide: #0b4a5a;
+  --foam: #e8f6f3;
+  --sand: #f2c879;
+  --coral: #ff6b5b;
+  --f: 'Readex Pro', Tahoma, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  height: 100%;
+  background: var(--deep);
+  color: var(--foam);
+  font-family: var(--f);
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Custom animations */
+@keyframes drift {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+@keyframes pop {
+  0% {
+    opacity: 1;
+    transform: scale(0.4);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+
+.anim-drift {
+  background-size: 300% 300%;
+  animation: drift 18s ease-in-out infinite alternate;
+}
+
+.anim-pop {
+  animation: pop 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.g0 {
+  background-image: linear-gradient(135deg, #04202b, #0f7a86, #04202b, #f2c879);
+}
+.g1 {
+  background-image: linear-gradient(160deg, #0b4a5a, #04202b, #ff6b5b, #0b4a5a);
+}
+.g2 {
+  background-image: linear-gradient(120deg, #04202b, #1d9aa3, #e8f6f3, #04202b);
+}
+.g3 {
+  background-image: linear-gradient(200deg, #f2c879, #0b4a5a, #04202b, #0f7a86);
+}
+
+/* Feed scroll snap */
+.feed-container {
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.feed-container::-webkit-scrollbar {
+  display: none;
+}
+
+.feed-item {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Range input styling */
+input[type="range"] {
+  accent-color: #f2c879;
+}
